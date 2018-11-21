@@ -1,0 +1,44 @@
+<?php
+
+namespace CommandNamespace;
+
+use CommandNamespace\YumiCommand;
+
+class CommandNameCommand extends YumiCommand
+{
+	/**
+	 * Hold command name
+	 * @var string
+	 */
+	protected $name = "command:example";
+
+	/**
+	 * Hold command description
+	 * @var string
+	 */
+	protected $description = "command example description";
+
+	/**
+	 * Hold command arguments
+	 * @var array
+	 */
+	protected $arguments = [
+		// arguments goes here
+	];
+
+	/**
+	 * Hold command options
+	 * @var array
+	 */
+	protected $options = [
+		// options goes here
+	];
+	
+	/**
+	 * @inheritdoc
+	 */
+	public function fire() 
+	{
+		$this->comment($this->name.'::command is fired');
+	}
+}

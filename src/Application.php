@@ -23,13 +23,16 @@ class Application extends SymfonyApplication
 	 * @var [type]
 	 */
 	protected static $baseCommands = [
-		\Chibi\Console\Commands\ChibiTestCommand::class
+		\Chibi\Console\Commands\YumiCreateCommand::class,
+		\Chibi\Console\Commands\YumiCreateControllerCommand::class,
+		\Chibi\Console\Commands\YumiCreateModelCommand::class,
+		\Chibi\Console\Commands\YumiCreateHurdleCommand::class,
+		\Chibi\Console\Commands\YumiCreateEventCommand::class,
 	];
 
 	/**
-	 * [console description]
 	 * @param  array  $newCommands [description]
-	 * @return [type]              [description]
+	 * @return void
 	 */
 	public static function console($newCommands = []) 
 	{
@@ -39,17 +42,14 @@ class Application extends SymfonyApplication
 	}
 	
 	/**
-	 * [mapCommands description]
-	 * @param  [type] $app         [description]
-	 * @param  [type] $newCommands [description]
-	 * @return [type]              [description]
+	 * @param  SymfonyApplication $app
+	 * @param  array $newCommands
+	 * @return map all commands
 	 */
-	protected function mapCommands($app,$newCommands) 
+	protected function mapCommands($app, $newCommands) 
 	{
-		foreach (self::$baseCommands as $command) {
-			$app->add(new $command());
-		}
-		foreach ($newCommands as $command) {
+		$allCommands = array_merge(self::$baseCommands, $newCommands);
+		foreach ($allCommands as $command) {
 			$app->add(new $command());
 		}
 	}

@@ -2,26 +2,28 @@
 
 namespace Chibi\Console\Commands;
 
-class ChibiTestCommand extends ChibiCommand
+use Chibi\Console\Commands\YumiCommand;
+
+class YumiCreateHurdleCommand extends YumiCommand
 {
 	/**
 	 * Hold command name
 	 * @var string
 	 */
-	protected $name = "test";
+	protected $name = "create:hurdle";
 
 	/**
 	 * Hold command description
 	 * @var string
 	 */
-	protected $description = "test description";
+	protected $description = "create new hurdle";
 
 	/**
 	 * Hold command arguments
 	 * @var array
 	 */
 	protected $arguments = [
-		'name' => 'this test name argument'
+		// arguments goes here
 	];
 
 	/**
@@ -29,7 +31,7 @@ class ChibiTestCommand extends ChibiCommand
 	 * @var array
 	 */
 	protected $options = [
-		'check' => 'this is a --check option'
+		// options goes here
 	];
 	
 	/**

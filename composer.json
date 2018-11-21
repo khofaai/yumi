@@ -1,8 +1,9 @@
 {
-	"name":"chibi/console",
+	"name":"yumi/console",
 	"version":"0.1.0",
 	"require":{
-		"symfony/console":"3.*"
+		"symfony/console":"4.*",
+		"illuminate/filesystem":"5.*"
 	},
 	"autoload": {
 	    "psr-4": {

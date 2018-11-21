@@ -1,0 +1,12 @@
+<?php
+
+namespace ControllerNamespace;
+
+use Kolores\Request;
+use Kolores\Response;
+use Kolores\Controller\Controller;
+
+class ControllerNameController extends Controller
+{
+    //
+}

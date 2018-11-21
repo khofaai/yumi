@@ -1,0 +1,10 @@
+<?php
+
+namespace ModelNamespace;
+
+use Kolores\Model\Katana;
+
+class ModelName extends Katana
+{
+    static $table = 'tableName';
+}
